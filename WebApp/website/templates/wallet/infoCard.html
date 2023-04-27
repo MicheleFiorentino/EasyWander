@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+{% block title %}Wallet{% endblock %}
+{% block content %}
+
+<div class="container-3">
+    <!--Documento che mostra i dettagli dell'account-->
+    <main class="main-2">
+        <br>
+        <br>
+        <span class="btl-back" onclick=location.href='wallet'>&#8630; Back</span>
+        <br>
+        <br>
+
+        <h6>Info of Your Payment Cards</h6>
+
+
+            <div class="table-responsive">
+            <table class="table table-hover table-light">
+                <thead class="thead">
+                <tr>
+                    <th scope="col" class="bg-warning">Number</th>
+                    <th scope="col" class="bg-info">Type</th>
+                    <th scope="col" class="bg-info">First Name</th>
+                    <th scope="col" class="bg-info">Last Name</th>
+                    <th scope="col" class="bg-info">Valid Thru</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>1111 2222 3333 4444</td>
+                    <td>Visa</td>
+                    <td>Gianni</td>
+                    <td>Celeste</td>
+                    <td>24/06/22</td>
+                </tr>
+                </tbody>
+            </table>
+            <br>
+            <br>
+            <br>
+        </div>
+
+
+    </main>
+</div>
+
+{% endblock %}

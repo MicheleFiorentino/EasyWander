@@ -1,0 +1,68 @@
+{% extends "base.html" %}
+{% block title %}Home{% endblock %}
+{% block content %}
+
+
+<!-- Mappa e QR Code -->
+
+<section class="pages">
+
+    <!--Pagina per stanziare Maps -->
+    <div class="page is-active" data-page="1">
+        <div id="map"></div>
+    </div>
+
+
+
+    <!--Pagina per stanziare lo Scanner del QRcode disponibile solo in mobile -->
+    <div class="page" data-page="2">
+        <script src="html5-qrcode.min.js"></script>
+        <div class="container-scan">
+            <div id="qr-reader" style="width: 80%"></div>
+        </div>
+        <div class="col" style="padding:1.37rem;">
+            <p class="scan-result">Scan Result:</p>
+            <div id="result"></div>
+        </div>
+</div>
+<br>
+    </div>
+    <br>
+
+
+</section>
+
+
+<!--Allego gli script-->
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script src="../static/main.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+<script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
+
+
+<!-- Mappa -->
+
+<div id="mapid"></div>
+<script src="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.js"></script>
+
+<script>
+
+    var mymap = L.map('mapid').setView([40.851799, 14.268120], 16);
+
+    L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
+    attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+    }).addTo(mymap);
+
+    var marker1 = L.marker([40.851799, 14.268120]).addTo(mymap)
+    var marker2 = L.marker([40.853832, 14.264882]).addTo(mymap)
+    var marker3 = L.marker([40.850976, 14.267197]).addTo(mymap)
+    var marker4 = L.marker([40.854027, 14.271228]).addTo(mymap)
+
+</script>
+
+
+
+{% endblock %}
+
+var x = 51.5;
+var y = -0.09;

@@ -1,0 +1,56 @@
+{% extends "base.html" %}
+{% block title %}Login{% endblock %}
+{% block header %}{% endblock %}
+{% block content %}
+
+<main class="main-2">
+    <h1> Easy Login</h1>
+<br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+        <span class="btl-back" onclick=location.href='javascript:history.go(-1)'>&#8630; Back</span>         <!--Ritorna alla pagina precedente -1-->
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <div class="div2">
+        <form method="POST">
+            <div class="form-group">
+                <label for="email">Email Address</label>
+                <input
+                        type="email"
+                        class="form-control"
+                        id="email"
+                        name="email"
+                        placeholder="Enter email"
+                />
+            </div>
+            <br>
+            <br>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input
+                        type="password"
+                        class="form-control"
+                        id="password"
+                        name="password"
+                        placeholder="Enter password"
+                />
+            </div>
+            <br />
+            <br>
+            <br>
+            <br>
+            <br>
+            <div class="col-12">
+            <button type="submit" class="btl">Login</button>
+            </div>
+        </form>
+    </div>
+</main>
+
+{% endblock %}

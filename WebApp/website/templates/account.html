@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+{% block title %}Account{% endblock %}
+{% block content %}
+
+<div class="container-3">
+<!--Documento che mostra i dettagli dell'account-->
+<main class="main-2">
+    <br>
+    <br>
+            <span class="btl-back" onclick=location.href='/'>&#8630; Back</span>
+    <br>
+    <br>
+
+    <h6>My Account</h6>
+
+                <div class="container">
+
+                    <table class="table table-hover table-light">
+                        <thead class="thead">
+                        <tr>
+                            <th scope="col" class="bg-warning">First Name</th>
+                            <th scope="col" class="bg-info">Last Name</th>
+                            <th scope="col" class="bg-info">email</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                            <td>{{ user.first_name }}</td>
+                            <td>{{ user.last_name }}</td>
+                            <td>{{ user.email }}</td>
+                </tbody>
+            </table>
+                <br>
+                <br>
+                <br>
+            </div>
+    </main>
+</div>
+</body>
+</html>
+
+{% endblock %}

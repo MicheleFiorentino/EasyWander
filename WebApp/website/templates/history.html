@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% block title %}History{% endblock %}
+{% block content %}
+
+<div class="container-3">
+<main class="main-2">
+<!--Sezione che mostra lo storico degli scooter-->
+    <br>
+    <br>
+        <span class="btl-back" onclick=location.href='/'>&#8630; Back</span>
+
+
+        <br>
+        <br>
+
+    <h6>History</h6>
+
+    <!--Che tipo di form usare per inserire gli scooter nella tabella?-->
+    <ul class="list-group">
+        <li class="list-group-item list-group-item-info" style="font-weight: bold">Rented scooters</li>
+        {% for scooter in user.rent %}
+        <li class="list-group-item list-group-item-light">Scooter ID: {{ scooter.id }} , Rent Date: {{ scooter.rent_date}}</li>
+        {% endfor %}
+    </ul>
+        <br>
+        <br>
+        <br>
+
+
+</main>
+</div>
+
+{% endblock %}
